@@ -3,16 +3,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
-
+    
     $to = "2k23.cs2314011@gmail.com";
-    $subject = "Contact Form Submission";
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-    $headers = "From: no-reply@yourwebsite.com";
-
+    $subject = "Contact Us Message";
+    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
+    $headers = "From: no-reply@quantcare.org";
+    
     if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
+        echo "Your message has been sent!";
     } else {
-        echo "Message sending failed!";
+        echo "Sorry, there was a problem. Please try again.";
     }
 }
 ?>
